@@ -1,0 +1,197 @@
+
+:root{
+  --body_back_color:#83bfdd;
+  --header_back_color: #0f63c9;
+  --border_color : black;
+  --margin_size:10px;
+}
+
+body{
+    width: 70%;
+    padding-left: 15%;
+}
+
+/* || HEADER */
+header{
+    background-color: var(--header_back_color);
+    color: #ffffff; 
+    width: 100%;
+    height: 55px;
+    border: 5px solid var( --border_color);
+    text-align: center;
+    border-top-left-radius : 5px;
+    border-top-right-radius : 5px;
+}
+
+.back-image-container{
+   border: 15px solid var( --border_color);
+   height: 200px;
+   border-bottom-left-radius:  5px;
+   border-bottom-right-radius:  5px;
+}
+
+#RPS{
+    font-size: 24px;
+}
+
+#points{
+    display: flex;
+    margin-top: var(--margin_size);
+    width: 100%;
+    border: 5px solid var(--header_back_color);
+    height: auto;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.Robot-points, .Your-points, .robots-playing{
+    display: flex;
+    width: 33%;
+    justify-content: center;
+    font-weight: 900;
+}
+
+#game{
+    display: flex;
+    margin: var(--margin_size);
+    width: 98.5%;
+    justify-content:space-between;
+}
+
+.robots, .rock-paper-scissors{
+    min-width: 300px;
+    align-items: center;
+
+}
+#historicRobots, #mainImage{
+    border: 2px solid var(--header_back_color);
+    border-radius: 5px;
+
+}
+
+.main {
+    max-width: 475px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.hidden {
+    display: none;
+    transition: all .2s;
+
+}
+
+#play{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+}
+
+#mainImage{
+    
+    width: 100%;
+    max-width: 450px;
+    justify-content: center;
+
+}
+.playerButtons{
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-evenly;
+     width: 100%;
+}
+
+#robot-wins, #robot-loses{
+    padding-right: 20px;
+}
+
+#robot-player{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+footer{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: var(--header_back_color);
+    color: #ffffff; 
+    width: 100%;
+    height: auto;
+    border: 5px solid var( --border_color);
+    text-align: center;
+    border-radius: 5px;
+}
+
+#some-buttons{
+    justify-content:left;
+}
+
+
+@media screen and (max-width: 1195px) {
+ 
+    #game {
+        display: block;
+    }
+
+    .robots, .rock-paper-scissors{
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+   }
+
+   @media screen and (max-width: 1046px) {
+   
+
+
+    #robot-wins, #robot-loses{
+        padding-right: 1px;
+    }
+
+    header{
+        height: 75px;
+    }
+
+    header div h1 #RPS::before,
+    #points .Robot-points #alien-txt-wins span::before,
+    #points .robots-playing #winner span::before,
+    #points .Your-points #human-txt-wins span::before{
+        content: "\A";
+        white-space: pre;
+      }
+
+
+      .Robot-points, .Your-points, .robots-playing{
+        display: block;
+        padding: 1px;
+        align-items:justify;
+  
+    }
+
+    }
+
+   @media screen and (max-width: 899px) {
+   
+    header{
+        height: 105px;
+    }
+
+    header div h1 #lets::before,
+    .wld::before{
+        content: "\A";
+        white-space: pre;
+      }
+
+      .playerButtons{
+        flex-direction: column;
+   }
+
+    }
+
+   
+  

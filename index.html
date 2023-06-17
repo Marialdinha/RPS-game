@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css"
+    integrity="sha512-HqxHUkJM0SYcbvxUw5P60SzdOTy/QVwA1JJrvaXJv4q7lmbDZCmZaqz01UPOaQveoxfYRv1tHozWGPMcuTBuvQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>Rock Paper Scissors</title>
+</head>
+
+<body>
+  <!-- HEADER-->
+  <header>
+    <div class="header">
+      <h1>Humans... you have no chance... <span id="lets">lets play... </span><span id="RPS"> Rock Paper Scissors</span></h1>
+    </div>
+  </header>
+
+  <!-- MAIN-->
+  <main>
+    <section>
+      <div class="back-image-container" style="background-image: url('./assets/images/RPS_playing.jpeg');">
+      </div>
+    </section>
+
+    <section id="points" class="p-1 is-size-6">
+      <div class="Robot-points">
+        <p id="alien-txt-wins">Robot <span>Points:&nbsp</span></p>
+        <p id="Robot-number-wins">0</p>
+      </div>
+      <div class="robots-playing">
+        <p id="winner">Best 2 <span>out of 3&nbsp</span></p>
+        <p ></p>
+      </div>
+      <div class="Your-points">
+        <p id="human-txt-wins">Your <span>Points:&nbsp</span></p>
+        <p id="Your-number-wins">0</p>
+      </div>
+    </section>
+
+
+
+      <div class="rock-paper-scissors">
+        <div id="robot-player" class="is-flex is-flex-wrap-wrap">
+          <p class="playing hidden endMatch m-5"><span id="cpuNameRecord" ></span><span id="matchInfo" class="playing"></span></p>
+          <div class="playing endMatch hidden m-5">
+            <span class="wld">Wins: </span><span id="robot-wins" > </span>
+            <span class="wld">Losses: </span><span id="robot-loses"></span>
+          </div>
+        </div>
+
+        <div class="container is-centered is-flex is-flex-wrap-wrap is-justify-content-space-evenly">
+
+          <img id="mainImage" class="playing endMatch matchmaking hidden" />
+        </div>
+        
+        <div class="hidden playerButtons" id="playerButtons">
+
+          <button id="rockButton" class="button is-dark playing hidden m-5" data-move="rock">
+            rock
+          </button>
+          <button id="paperButton" class="button is-dark playing hidden m-5" data-move="paper">
+            paper
+          </button>
+          <button id="scissorsButton" class="button is-dark playing hidden m-5" data-move="scissors">
+            scissors
+          </button>
+          <p class="playing hidden"><span id="playerMoveDisplay" ></span></p>
+        </div>
+
+        <div>
+          <button id="rematchButton" class="button is-dark m-5 endMatch hidden">
+            Rematch
+          </button>
+          <button id="startButton" class="button is-dark m-5 endMatch hidden">
+            Find a match
+        </button>
+        <span id="playerRecord" class="playing endMatch hidden"></span>
+        </div> 
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER-->
+  <footer is-size-5 >
+    <section id="some-buttons">
+      <section id="game" class="p-4 ">
+        <div class="robots">
+          <div class="select">
+            <select id="historicRobots"></select>
+          </div>
+        </div>
+      <section id="play" class="p-1">
+        <button id="challengeButton" class="button has-text-weight-bold titleScreen playing endMatch">Challenge</button>
+      </section>
+      <section class="robots-online " >
+        <p id="robotsOnline" class="matchmaking titleScreen hidden has-text-weight-bold"></p>
+      </section>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+    integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/robotNames.js"></script>
+</body>
+
+</html>
